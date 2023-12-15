@@ -1,0 +1,43 @@
+.section-heading {
+  text-align: center;
+
+  &__title {
+    font-weight: normal;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 40px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        height: 2px;
+        width: 120px;
+        background-color: black;
+    }
+
+    &:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: 50%;
+        bottom: -38px;
+        transform: translateX(-50%);
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: #3E4040;
+    }
+  }
+
+  &__description {
+    width: 550px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    line-height: 1.5;
+    color: var(--description-color);
+    
+  }
+}
