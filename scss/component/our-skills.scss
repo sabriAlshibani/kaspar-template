@@ -1,0 +1,134 @@
+.our-skills {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+/*     @media (max-width: 767px) {
+        flex-direction: column;
+    } */
+  }
+  &__testimonials,
+  &__skills {
+    @media (min-width: 992px) {
+        flex-basis: 45%;
+    }
+    &-title {
+      margin: 0 0 30px;
+      font-weight: normal;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &-description {
+      color: var(--description-color);
+      line-height: 2;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__testimonials {
+
+    &-bullets {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      &-item {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #aaa;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        &--active {
+          background-color: var(--min-color);
+          border-color: var(--min-color);
+        }
+      }
+    }
+    &-content {
+        display: flex;
+        margin-bottom: 30px;
+        align-items: center;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      & img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        @media (max-width: 767px) {
+            margin: 0 auto 20px;
+        }
+
+      }
+    }
+
+    &-text {
+        line-height: 1.8;
+        border-bottom: 1px solid #ccc;
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+
+        &-say {
+          font-size: 14px;
+          color: var(--description-color);
+          text-align: right;
+          margin-bottom: 10px;
+        }
+      }
+  }
+
+  &__skills {
+    &-prog-holder {
+      margin-bottom: 40px;
+
+      &-title {
+        margin-bottom: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      &-item {
+        background-color: #dedadc;
+        height: 30px;
+
+        & span {
+          display: block;
+          background-color: var(--min-color);
+          height: 100%;
+          position: relative;
+
+          &::before {
+            content: attr(data-progress);
+            position: absolute;
+            top: -40px;
+            right: -14px;
+            background-color: black;
+            color: white;
+            padding: 4px 0;
+            border-radius: 4px;
+            width: 40px;
+
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 8px;
+            border-color: black transparent transparent transparent;
+            right: -8px;
+            top: -15px
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 2;
   .container {
-  min-height: 79px;
+    min-height: 79px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,7 @@
         transition: 0.3s;
         @media (max-width: 767px) {
           padding: 15px;
-          background-color: rgb( 0 0 0/70%);
+          background-color: rgb(0 0 0/70%);
         }
       }
       &--active,
