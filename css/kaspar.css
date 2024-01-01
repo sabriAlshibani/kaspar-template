@@ -184,22 +184,6 @@ header {
   padding-bottom: var(--main-padding);
   background-color: white;
 }
-.services__content {
-  /*         @media (min-width:991px) {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-              column-gap: 2%;
-              row-gap: 2%;
-
-          }
-          @media (max-width:767px) {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-              column-gap: 2%;
-              row-gap: 2%;
-
-          } */
-}
 @media (min-width: 768px) {
   .services__content {
     display: flex;
@@ -224,6 +208,13 @@ header {
 @media (min-width: 992px) {
   .services__item {
     width: 23%;
+  }
+}
+@media (max-width: 767px) {
+  .services__item {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .services__item img {
@@ -504,10 +495,19 @@ header {
   overflow: hidden;
   text-align: center;
 }
+.about__image {
+  width: 600px;
+  margin: 0 auto 100px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background-color: var(--min-color);
+}
+@media (max-width: 767px) {
+  .about__image {
+    width: 300px;
+    padding: 20px;
+  }
+}
 .about__image img {
-  position: relative;
-  bottom: -120px;
-  margin-top: -120px;
   max-width: 100%;
 }
 @media (max-width: 767px) {
@@ -973,6 +973,49 @@ header {
   .contact-us__info address {
     margin-bottom: 50px;
   }
+}
+
+.footer {
+  padding-top: calc(var(--main-padding) / 2);
+  padding-bottom: calc(var(--main-padding) / 2);
+  background-image: url(../images/portfolio3.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.footer .container {
+  position: relative;
+}
+.footer p:not(.footer__copyright) {
+  padding: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+.footer__social-icons i {
+  padding: 10px 15px;
+}
+.footer__copyright {
+  margin-top: 60px;
+}
+.footer__copyright span {
+  font-weight: bold;
+  color: var(--min-color);
+}
+.footer img {
+  margin-bottom: 20px;
 }
 
 :root {

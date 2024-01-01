@@ -1,19 +1,24 @@
 .about {
-    padding-top: var(--main-padding);
-    overflow: hidden;
-    text-align: center;
-    &__image {
-        & img {
-            position: relative;
-            bottom: -120px;
-            margin-top: -120px;
-            max-width: 100%;
-            @media (max-width: 767px) {
-                position: relative;
-                bottom: -60px;
-                margin-top: -60px;
-        }
+  padding-top: var(--main-padding);
+  overflow: hidden;
+  text-align: center;
+  &__image {
+    width: 600px;
+    margin: 0 auto 100px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-color: var(--min-color);
+    @media (max-width: 767px) {
+      width: 300px;
+      padding: 20px;
     }
-        }
 
+    & img {
+      max-width: 100%;
+      @media (max-width: 767px) {
+        position: relative;
+        bottom: -60px;
+        margin-top: -60px;
+      }
+    }
+  }
 }
