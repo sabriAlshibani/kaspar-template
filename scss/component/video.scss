@@ -1,5 +1,7 @@
 .video {
     position: relative;
+    height: 400px;
+    overflow: hidden;
 
     &::before {
         content: "";
@@ -26,6 +28,8 @@
         &-title {
             margin: 0 0 20px;
             font-weight: nor;
+        text-transform: uppercase;
+
         }
         &-description {
             margin-bottom: 30px;

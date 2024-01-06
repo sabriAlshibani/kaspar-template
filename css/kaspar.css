@@ -411,7 +411,7 @@ header {
 }
 .portfolio__imgs-box img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   border-radius: 0;
 }
@@ -426,17 +426,18 @@ header {
   left: 0;
   width: 100%;
   background-color: white;
-  bottom: -100px;
+  bottom: -100%;
   padding: 20px;
   transition: 0.3s;
   text-align: center;
 }
 .portfolio__imgs-title {
   margin-bottom: 20px;
-  color: black;
+  color: var(--min-color);
+  font-size: 20px;
 }
 .portfolio__imgs-description {
-  color: var(--min-color);
+  color: black;
   font-size: large;
 }
 .portfolio__more {
@@ -452,6 +453,8 @@ header {
 
 .video {
   position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 .video::before {
   content: "";
@@ -477,6 +480,7 @@ header {
 .video__text-title {
   margin: 0 0 20px;
   font-weight: nor;
+  text-transform: uppercase;
 }
 .video__text-description {
   margin-bottom: 30px;
